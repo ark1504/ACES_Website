@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="form.css" type="text/css">
+  	<style media="screen">
+  	li a:hover:not(.active2) {
+  		background-color:#ffa654;
+  		color: #298fca;
+
+  	}
+    * {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+p{
+  text-align: center;
+  font-size: 40px;
+  color: #298fca;
+}
+    </style>
+  </head>
+  <body>
+    <div class="row">
+        <div class="column">
+        <h1><img src="Logo.PNG" height="100" width="100">  </h1>
+      </div><br><br>
+         <div class="column">
+          <ul>
+              <li><a  href="1.html">Home</a></li>
+            <li><a  href="about.html">About US</a></li>
+            <li><a  href="team.html">Team</a></li>
+            <li><a  href="event.html">Events</a></li>
+            <li><a  href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div><center>
+<h1>Our Events</h1></center>
+<p>Foundation Day:</p>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="5.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="6.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<p>Technical Events:</p>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="7.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="8.jpg" style="width:100%">
+  </div>
+  <div class="mySlides2">
+    <img src="9.jpg" style="width:100%">
+  </div>
+  <div class="mySlides2">
+    <img src="10.jpg" style="width:100%">
+  </div>
+  <div class="mySlides2">
+    <img src="11.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+
+  </body>
+</html>
